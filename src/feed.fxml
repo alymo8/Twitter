@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" style="-fx-background-color: yellowgreen;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TwitterView">
+   <children>
+      <Button layoutX="335.0" layoutY="148.0" mnemonicParsing="false" onAction="#tryPost" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: transparent;" text="Post">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutY="148.0" mnemonicParsing="false" onAction="#tryFeed" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: transparent;" text="Feed">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Line endX="-15.70001220703125" endY="-42.0" layoutX="9.0" layoutY="216.0" startX="491.0" startY="-42.0" />
+      <Button layoutX="167.0" layoutY="148.0" mnemonicParsing="false" onAction="#tryTrending" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: transparent;" text="Trending">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Line endX="-15.70001220703125" endY="-42.0" layoutX="16.0" layoutY="190.0" startX="486.0" startY="-42.0" />
+      <Line endX="1.0" endY="12.0" layoutX="166.0" layoutY="163.0" startX="1.0" startY="-13.0" />
+      <ImageView fitHeight="77.0" fitWidth="96.0" layoutX="126.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="208.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HashTag">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="433.0" layoutY="31.0" onAction="#goHome" text="Log Out">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+      <TextArea fx:id="text" layoutX="32.0" layoutY="234.0" prefHeight="392.0" prefWidth="439.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Line endX="1.0" endY="12.0" layoutX="333.0" layoutY="163.0" startX="1.0" startY="-13.0" />
+      <TextField fx:id="searchContext" layoutX="125.0" layoutY="190.0" prefHeight="25.0" prefWidth="252.0" promptText="search author or date" />
+      <Button layoutX="387.0" layoutY="184.0" mnemonicParsing="false" onAction="#doSearch" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search_icon_153438.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>
